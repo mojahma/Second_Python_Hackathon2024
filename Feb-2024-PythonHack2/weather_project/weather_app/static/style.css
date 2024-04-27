@@ -1,0 +1,80 @@
+/* Apply a CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4379ee;
+    text-align: center;
+    padding: 100px 50px 50px 50px; /* top, right, bottom, left */
+    position: relative; /* Ensure proper positioning of header */
+}
+
+/* Add the web app name to the top left */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgb(16, 16, 17); /* Change color to blue */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px; /* Increase padding */
+    border: 1px solid #1a1717;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: calc(50% - 20px); /* Adjusted width for side by side placement */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    display: inline-block; /* Display inputs side by side */
+}
+
+button {
+    background-color: rgb(5, 5, 5); /* Change button color to blue */
+    color: white;
+    padding: 10px 20px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensure button is on a separate line */
+    margin: 0 auto; /* Center button horizontally */
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.forecast {
+    background-color: #dadfd9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    width: calc(20% - 20px); /* Adjusted to 20% of container width */
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    .forecast {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast {
+        width: calc(100% - 20px);
+    }
+}
